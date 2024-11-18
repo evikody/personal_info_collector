@@ -11,13 +11,16 @@ while True:
 
     # A loop that checks if the age is valid
     while True:
-        age = input("Please enter your age: ")
-        if not age.isdigit():
-            print("Invalid. Please enter only numbers.")
-        else:
-            break
+        try:
+            age = int(input("Please enter your age: "))
+            if age > 122:
+                print("Invalid. Please enter a reasonable and valid age.")
+            else:
+                break
+        except ValueError:
+            print("Only numbers are allowed. Try Again.")
 
-    address = input("Please enter your address: ")
+    address = input("Please enter your address: ").strip()
     number = input("Please enter your phone number: +63")
     email = input("Please enter your email address: ")
 
