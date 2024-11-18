@@ -35,7 +35,8 @@ while True:
     if not name_found:
         print("No information found for the given name.")
 
+    # Ask the user if they want to search for another person
     search_again = input("\nDo you want to search for another person? (yes/no): ").lower()
     if search_again != 'yes':
         print("Goodbye!")
-        break
+        break # If not, the program stops
