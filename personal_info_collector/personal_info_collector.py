@@ -1,17 +1,22 @@
 # A loop that will continue asking until the user input no
 while True:
-    # A loop that will continue asking until a full name is valid
+    # A loop that checks if the full name has at least 2 words
     while True:
         # Ask the user for personal information
         name = input("Please enter you full name: ").strip()
-
-        # Checks if the full name has at least 2 words
         if len(name.split()) < 2:
-            print("Please enter both your first and last name.")
+            print("Invalid. Please enter both your first and last name.")
         else:
             break
 
-    age = input("Please enter your age: ")
+    # A loop that checks if the age is valid
+    while True:
+        age = input("Please enter your age: ")
+        if not age.isdigit():
+            print("Invalid. Please enter only numbers.")
+        else:
+            break
+
     address = input("Please enter your address: ")
     number = input("Please enter your phone number: +63")
     email = input("Please enter your email address: ")
