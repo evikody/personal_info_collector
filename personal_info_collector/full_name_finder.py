@@ -20,5 +20,11 @@ for line in info:
         # Display the searched name
         print(line.strip())
 
+        # Finds the index or position of the variable "line" in the list "info"
+        index = info.index(line)
+
+        # Prints the additional information
+        print(info[index + 1].strip()) # Age
+
 if not name_found:
     print("No information found for the given name.")
