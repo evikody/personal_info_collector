@@ -20,3 +20,5 @@ for line in info:
         # Display the searched name
         print(line.strip())
 
+if not name_found:
+    print("No information found for the given name.")
