@@ -32,6 +32,7 @@ while True:
         else:
             break
 
+    # A loop for asking a valid email address
     while True:
         email = input("Please enter your email address: ").strip()
         if "@" in email and ".com" in email:
@@ -46,6 +47,10 @@ while True:
                      f"Number: {number}\n"
                      f"Email Address: {email}\n"
                      f"{'-' * 40}\n")
+
+    # Writing the information to the file using "with open"
+    with open("./personal_information.txt", "a") as file_handle:
+        file_handle.write(personal_info)
 
     # Ask the user if they want to input another person's information
     retry = input("Do you want to enter another person's information? (Yes/No): ").lower()
