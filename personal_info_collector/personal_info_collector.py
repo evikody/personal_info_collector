@@ -21,8 +21,21 @@ while True:
             print("Only numbers are allowed. Try Again.")
 
     address = input("Please enter your address: ").strip()
-    number = input("Please enter your phone number: +63")
-    email = input("Please enter your email address: ")
+
+    # A loop that checks if the phone number is valid
+    while True:
+        number = input("Please enter your phone number: +63")
+        if len(number) != 10:
+            print("Invalid. Please enter a valid phone number.")
+        else:
+            break
+
+    while True:
+        email = input("Please enter your email address: ").strip()
+        if "@" and ".com" in email:
+            break
+        else:
+            print("Invalid. Please enter a valid email address")
 
     # Variable for all the collected information
     personal_info = f"Full Name: {name}\nAge: {age}\nAddress: {address}\nNumber: {number}\nEmail Address: {email}"
