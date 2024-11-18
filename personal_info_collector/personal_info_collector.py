@@ -20,6 +20,7 @@ while True:
         except ValueError:
             print("Only numbers are allowed. Try Again.")
 
+    # Ask the user's address
     address = input("Please enter your address: ").strip()
 
     # A loop that checks if the phone number is valid
@@ -48,7 +49,7 @@ while True:
                      f"Email Address: {email}\n"
                      f"{'-' * 40}\n")
 
-    # Writing the information to the file using "with open"
+    # Writing the information in a txt file using "with open"
     with open("./personal_information.txt", "a") as file_handle:
         file_handle.write(personal_info)
 
